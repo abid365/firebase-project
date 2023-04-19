@@ -8,15 +8,21 @@ import {
 import './index.css'
 import Main from './layout/Main';
 import Home from './Components/Home';
+import Login from './Components/Login';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
-    children: [{
-      path: '/',
-      element: <Home></Home>
-    }]
+    children: [
+      {path: '/',
+      element: <Home></Home>},
+      {
+        path: 'login',
+        element: <Login></Login>
+      }
+
+    ]
   },
 ]);
 
